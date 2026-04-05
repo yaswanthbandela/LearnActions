@@ -13,4 +13,5 @@ jobs:
         run: echo "CI running on PR"
 
       - name: CD Step (should NOT run in real pipeline)
-        run: echo "CD is running on PR 🚨"
+        run: |
+          cat README.md
