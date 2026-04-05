@@ -1,0 +1,16 @@
+name: pr-cd-test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: CI Step
+        run: echo "CI running on PR"
+
+      - name: CD Step (should NOT run in real pipeline)
+        run: echo "CD is running on PR 🚨"
